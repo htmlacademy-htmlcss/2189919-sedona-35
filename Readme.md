@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Журман Юлия](https://up.htmlacademy.ru/htmlcss/35/user/2189919).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
