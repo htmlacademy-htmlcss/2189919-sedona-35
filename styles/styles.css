@@ -341,3 +341,7 @@ body {
   padding: 0;
   border: none;
 }
+
+.visually-hidden {
+  visibility: hidden;
+}
