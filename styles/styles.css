@@ -275,7 +275,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   color: #fff;
-
 }
 
 
@@ -506,3 +505,20 @@ body {
   width: 170px;
 }
 
+.breadcrumbs {
+  display: flex;
+  list-style-type: none;
+}
+
+.catalog-filter-group {
+  border: none;
+}
+
+.catalog-hotels {
+  display: flex;
+}
+
+.card-hotel {
+  display: flex;
+  flex-wrap: wrap;
+}
