@@ -482,43 +482,57 @@ body {
   justify-content: center;
 }
 
-.page-footer-container {
+
+.inner-header {
   display: flex;
+  flex-direction: column;
 }
 
-.page-footer-container {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-contacts {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-contacts-list {
-  display: flex;
-  margin: 0 auto;
-  list-style-type: none;
-  width: 170px;
-}
-
-.breadcrumbs {
-  display: flex;
-  list-style-type: none;
-}
 
 .catalog-filter-group {
   border: none;
 }
 
-.catalog-hotels {
+.catalog-filter {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-hotel {
+.sorting {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer-container {
+  max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-contacts {
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-contacts-list {
+  display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+.footer-logo-img {
+  flex-grow: 1;
+	flex-basis: 0;
+	text-align: right;
 }
