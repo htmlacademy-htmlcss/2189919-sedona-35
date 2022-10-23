@@ -515,7 +515,7 @@ body {
 }
 
 .page-footer-container {
-  max-width: 1200px;
+  width: 1200px;
 	margin: 0 auto;
 }
 
@@ -527,12 +527,5 @@ body {
 
 .footer-contacts-list {
   display: flex;
-	flex-grow: 1;
-	flex-basis: 0;
-}
-
-.footer-logo-img {
-  flex-grow: 1;
-	flex-basis: 0;
-	text-align: right;
+  list-style-type: none;
 }
