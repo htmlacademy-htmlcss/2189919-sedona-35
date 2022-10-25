@@ -37,6 +37,7 @@ body {
 }
 
 .navigation-link {
+  display: block;
   font-family: "Pt Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
@@ -45,10 +46,12 @@ body {
   text-align: center;
   background-color: #fff;
   text-decoration: none;
+  padding: 20px 16px;
 }
 
 .main-container {
   flex-grow: 1;
+
 }
 
 .main-hero {
@@ -58,7 +61,9 @@ body {
   background-image: url(../images/main-divider.png), url(../images/main-img-bg.jpg);
   background-position: center bottom, center;
   background-repeat: no-repeat, no-repeat;
+  margin-bottom: 70px;
 }
+
 
 .advantages-list {
   text-align: center;
@@ -71,16 +76,17 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  width: 620px;
-  height: 72px;
+  max-width: 620px;
+  max-height: 72px;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .advantages-container {
   width: 1200px;
-  height: 286px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 90px;
 }
 
 .main-description {
@@ -89,8 +95,8 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  width: 651px;
-  height: 26px;
+  max-width: 651px;
+  max-height: 26px;
   margin: 0 auto;
 }
 
@@ -107,6 +113,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+  max-width: 175px;
+  margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 62px;
 }
 
 .advantages-description-blue {
@@ -116,10 +126,12 @@ body {
   line-height: 21px;
   text-align: center;
   color: #FFFFFF;
+  margin: 0 auto;
 }
 
 .advantages-item-blue-light {
   background-color: rgba(131, 179, 211, 0.12);
+
 }
 
 .advantages-item-blue-dark {
@@ -134,6 +146,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000;
+  max-width: 175px;
+  margin: 0 auto;
+  margin-top: 103px;
+  margin-bottom: 62px;
 }
 
 .advantages-description {
@@ -143,6 +159,9 @@ body {
   line-height: 21px;
   text-align: center;
   color: #000;
+  max-width: 230px;
+  margin: 0 auto;
+  margin-bottom: 120px;
 }
 
 .recommendations-item-blue-dark {
@@ -157,6 +176,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .recommendations-description {
@@ -166,6 +187,9 @@ body {
   line-height: 21px;
   text-align: center;
   color: #000;
+  max-width: 230px;
+  margin: 0 auto;
+  margin-bottom: 81px;
 }
 
 
@@ -177,6 +201,8 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .search-description {
@@ -185,9 +211,9 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  width: 592px;
-  height: 52px;
+  max-width: 592px;
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .button-basic {
@@ -202,11 +228,14 @@ body {
 .btn-link {
   font-size: 16px;
   line-height: 20px;
+  align-content: center;
 }
 
 .search-btn {
   font-size: 20px;
   line-height: 36px;
+  display: block;
+  margin-bottom: 96px;
 }
 
 
@@ -215,7 +244,12 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   width: 1200px;
-  height: 415px;
+  padding-top: 96px;
+  margin-bottom: 45px;
+}
+
+.subscribe-form-container {
+  margin-bottom: 104px;
 }
 
 .subscribe-title {
@@ -226,6 +260,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .subscribe-description {
@@ -234,9 +270,9 @@ body {
   line-height: 26px;
   text-align: center;
   color: #fff;
-  width: 475px;
-  height: 53px;
+  max-width: 475px;
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .button-second {
@@ -395,15 +431,27 @@ body {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style-type: none;
-  width: 607px;
+}
+
+
+
+.navigation-logo-img {
+  margin-right: 30px;
 }
 
 .navigation-user {
+  display: flex;
   max-width: 308px;
   margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .page-container {
@@ -414,6 +462,7 @@ body {
 .main-logo {
   display: block;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .main-divider {
@@ -436,18 +485,28 @@ body {
   width: 1200px;
 }
 
+.blue-card-container {
+  max-height: 384px;
+  flex-direction: column;
+  padding-bottom: 92px;
+}
+
 .advantages-item-blue-light {
+  display: flex;
+  flex-direction: column;
   width: 400px;
 }
 
 .advantages-item-blue-dark {
+  display: flex;
+  flex-direction: column;
   width: 400px;
 }
 
-.blue-card-container {
-  flex-direction: column;
-}
 
+.recommendations {
+  margin-bottom: 96px;
+}
 
 .recommendations-list {
   padding: 0;
@@ -469,6 +528,8 @@ body {
 .recommendations-img {
   display: block;
   margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
 }
 
 
@@ -535,4 +596,12 @@ body {
 .footer-contacts-list {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.footer-contacts-item {
+  display: block;
+  padding: 22px 17px;
+  margin-bottom: 30px;
 }
