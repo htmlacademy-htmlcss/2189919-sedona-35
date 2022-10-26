@@ -330,11 +330,15 @@ body {
 }
 
 
-.card-identify {
+.sorting-identify {
   font-family: inherit;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin-right: 200px;
+}
+.card {
+  margin-bottom: 80px;
 }
 
 .card-link {
@@ -383,17 +387,41 @@ body {
   background-color: #F2F2F2;
 }
 
+.pagination-wrapper {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+
 .pagination {
+  display: flex;
   background-color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 12px 23px;
   color: #ffffff;
   background-color: #82B3D3;
   text-decoration: none;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  border-radius: 4%;
+}
+
+.pagination-link-unordinary {
+  padding: 12px 18px;
 }
 
 .pagination-link-active {
@@ -559,22 +587,48 @@ body {
 
 .catalog-filter-group {
   border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 75px;
+  margin-right: 70px;
+}
+
+.catalog-filter-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-left: 70px;
+}
+
+.catalog-filter-item:not(last-child) {
+  margin-bottom: 16px;
 }
 
 .sorting {
   display: flex;
   align-items: center;
+  margin-left: 70px;
 }
 
 .card-list {
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
+  flex-wrap: wrap;
 }
 
 .pagination {
@@ -604,4 +658,37 @@ body {
   display: block;
   padding: 22px 17px;
   margin-bottom: 30px;
+  margin: 0;
+}
+
+.inner-header-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: #fff;
+  margin: 0;
+  margin-top: 35px;
+  margin-left: 70px;
+  margin-bottom: 8px;
+}
+
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 70px;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+
+.breadcrumbs-link {
+  margin-right: 28px;
+}
+
+.select-control {
+  margin-right: 70px;
 }
