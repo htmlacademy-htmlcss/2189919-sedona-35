@@ -678,11 +678,51 @@ body {
 .sorting {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-left: 70px;
 }
 
 .select-control {
   margin-right: 70px;
+}
+
+.buttons-container{
+  display: flex;
+}
+
+.buttons-container .sorting-button {
+  text-decoration: none;
+}
+
+.sorting-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.sorting-button:last-child {
+  margin: 0;
+}
+
+.sorting-button:active {
+  border: 2px solid #000000;
+}
+
+.sorting-button:hover {
+  border: 2px solid #000000;
+}
+
+.sorting-button:focus {
+  border: 2px solid #68A2CA;
+}
+
+.button-actual {
+  border: 2px solid #000;
 }
 
 /*sorting*/
