@@ -241,9 +241,7 @@ body {
   margin-bottom: 90px;
 }
 
-.advantages-item-blue-card {
-  background-color: #82B3D3;
-}
+
 
 .advantages-title-blue {
   font-family: "PT Sans", sans-serif;
@@ -315,13 +313,15 @@ body {
 
 .advantages-item-blue-card {
   display: flex;
-  width: 1200px;
+  width: 100%;
 }
 
 .blue-card-container {
-  max-height: 384px;
+  height: 100%;
+  object-fit: cover;
   flex-direction: column;
-  padding-bottom: 92px;
+  background-color: #82B3D3;
+  width: 33.33%;
 }
 
 .advantages-item-blue-light {
