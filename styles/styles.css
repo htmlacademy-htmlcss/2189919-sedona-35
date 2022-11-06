@@ -553,6 +553,19 @@ body {
   text-decoration: none;
 }
 
+.footer-contacts-phone:hover {
+  color: #756157;
+}
+
+.footer-contacts-phone:focus {
+  color: #756157;
+}
+
+.footer-contacts-phone:active {
+  color: #756157;
+  opacity: 30%;
+}
+
 .footer-contacts {
   display: flex;
 	justify-content: space-between;
@@ -574,8 +587,50 @@ body {
 }
 
 .page-footer-container {
-  width: 1200px;
+  width: 1060px;
 	margin: 0 auto;
+}
+
+.footer-contacts-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 40px;
+}
+
+.footer-contacts-img {
+  fill: #83B3D3;
+}
+
+.footer-contacts-img:hover {
+  fill: #68A2CA;
+}
+
+.footer-contacts-img:focus {
+  fill: #68A2CA;
+}
+
+.footer-contacts-img:active {
+  fill: #68A2CA;
+  opacity: 30%;
+}
+
+.footer-logo-img {
+  fill: #000000;
+}
+
+.footer-logo-img:hover {
+  fill: #756157;
+}
+
+.footer-logo-img:focus {
+  fill: #756157;
+}
+
+.footer-logo-img:active {
+  fill: #756157;
+  opacity: 30%;
 }
 
 /*footer*/
