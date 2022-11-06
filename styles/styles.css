@@ -428,7 +428,10 @@ body {
   line-height: 36px;
   display: block;
   margin-bottom: 96px;
+  padding: 8px 50px;
+  border-radius: 4px;
 }
+
 
 /*search*/
 
@@ -497,21 +500,6 @@ body {
   border-top-right-radius: 4px;
 }
 
-.button-second:hover {
-  background-color: #68A2CA;
-}
-
-.button-second:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.button-second:focus {
-  background-color: #68A2CA;
-}
-
-.button-second:disabled {
-  background-color: #E5E5E5;
-}
 
 .subscribe-form {
   display: flex;
@@ -980,6 +968,22 @@ body {
   color: #ffffff;
 }
 
+.button-fav-active:hover {
+  background-color: #6C9E42;
+}
+
+.button-fav-active:focus {
+  background-color: #6C9E42;
+}
+
+.button-fav-active:active {
+  background-color: #7DB54F;
+  opacity: 30%;
+}
+
+.button-fav-active:disabled {
+  background-color: #E5E5E5;
+}
 
 
 .button-basic {
@@ -992,6 +996,39 @@ body {
   text-transform: uppercase;
 }
 
+.button-basic:hover {
+  background-color: #615048;
+}
+
+.button-basic:focus {
+  background-color: #615048;
+}
+
+.button-basic:active {
+  background-color: #615048;
+  opacity: 30%;
+}
+
+.button-basic:disabled {
+  background-color: #E5E5E5;
+}
+
+
+.button-second:hover {
+  background-color: #68A2CA;
+}
+
+.button-second:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-second:focus {
+  background-color: #68A2CA;
+}
+
+.button-second:disabled {
+  background-color: #E5E5E5;
+}
 
 .btn-link {
   font-size: 16px;
