@@ -636,6 +636,9 @@ body {
 /*main-catalog*/
 
 .inner-container {
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 35px;
   background-image: url(../images/catalog-hotels-bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -654,31 +657,77 @@ body {
   line-height: 78px;
   color: #fff;
   margin: 0;
-  margin-top: 35px;
-  margin-left: 70px;
   margin-bottom: 8px;
 }
 
 /*main-catalog*/
 
 /*breadcrumbs*/
-.breadcrumbs-link {
-  color: inherit;
-  text-decoration: none;
-}
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 0;
   margin: 0;
-  margin-left: 70px;
-  list-style-type: none;
   margin-bottom: 40px;
+  padding: 0;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 28px;
+  list-style-type: none;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  position: absolute;
+  bottom: 5px;
+  left: 24px;
+  width: 7px;
+  height: 10px;
+  content: "";
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .breadcrumbs-link {
-  margin-right: 28px;
+  position: relative;
+  display: block;
+  min-width: 13px;
+  min-height: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color:  rgba(255, 255, 255, 0.3);;
+}
+
+.breadcrumbs-img {
+  fill: #ffffff;
+}
+
+.breadcrumbs-img:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-img:focus {
+  fill: #ffffff;
+}
+
+.breadcrumbs-img:active {
+  color:  rgba(255, 255, 255, 0.3);;
 }
 
 /*breadcrumbs*/
@@ -689,7 +738,6 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 75px;
-  margin-right: 70px;
 }
 
 .catalog-filter-title {
@@ -710,7 +758,6 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  margin-left: 70px;
 }
 
 .catalog-filter-item:not(last-child) {
@@ -934,13 +981,42 @@ body {
 
 
 .catalog-btn {
+  padding: 8px 50px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .cancel-btn {
-  background-color: #fff;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.cancel-btn:hover {
+  opacity: 60%;
+}
+
+.cancel-btn:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+.cancel-btn:active {
+  opacity: 60%;
+}
+
+.cancel-btn:disabled {
+  opacity: 10%;
 }
 
 .card-btn {
