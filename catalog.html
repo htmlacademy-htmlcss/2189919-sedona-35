@@ -68,8 +68,8 @@
             Фильтр для выбора гостиницы
             </h2>
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title"><span><b>Инфраструктура</b></span></legend>
+              <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
+              <legend class="catalog-filter-title">Инфраструктура</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -89,8 +89,8 @@
                   </ul>
                 </fieldset>
 
-                <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title"><span><b>Тип жилья</b></span></legend>
+                <fieldset class="catalog-filter-group catalog-filter-group-type">
+                  <legend class="catalog-filter-title">Тип жилья</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
@@ -110,12 +110,35 @@
                   </ul>
                 </fieldset>
 
-                <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title"><span><b>Стоимость, ₽:</b></span></legend>
-                </fieldset>
+                <fieldset class="catalog-filter-group catalog-filter-group-price">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
-                <button class="catalog-btn button-second" type="submit">Применить</button>
+                    <div class="price-wrapper">
+                      <label class="catalog-lable catalog-lable-min">
+                        <span class="catalog-price-text">от</span>
+                        <input class="catalog-price" type="number" name="min-price" value="0" min="0">
+                      </label>
+                      <label class="catalog-lable catalog-lable-max">
+                        <span class="catalog-price-text">до</span>
+                        <input class="catalog-price" type="number" name="max-price" value="9000" min="0">
+                      </label>
+                    </div>
+                    <div class="catalog-scale">
+                      <div class="catalog-bar">
+                        <button class="catalog-button button-min" type="button">
+                          <span class="visually-hidden">Выбрать минимальную стоимость.</span>
+                        </button>
+                        <button class="catalog-button button-max" type="button">
+                          <span class="visually-hidden">Выбрать максимальную стоимость.</span>
+                        </button>
+                      </div>
+                    </div>
+
+                </fieldset>
+                <div class="catalog-buttons">
+                  <button class="catalog-btn button-second" type="submit">Применить</button>
                 <button class="catalog-btn cancel-btn" type="submit">Сбросить</button>
+                </div>
                 </form>
             </section>
         </div>
