@@ -666,7 +666,7 @@ body {
   padding-bottom: 70px;
   background-image: url(../images/catalog-hotels-bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   color: #fff;
 }
 
@@ -1035,18 +1035,52 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin: 0;
+  padding: 0;
+  margin-right: 200px;
 }
 
 .sorting {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: 1060px;
-  justify-content: space-between;
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 .select-control {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
   margin-right: 70px;
+  padding: 12px 32px 12px 19px;
+  border: 2px solid #e5e5e5;
+  width: 292px;
+  border-radius: 4px;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+  appearance: none;
+}
+
+.select-control:hover {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:focus {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:active {
+  border: 2px solid #3f5e72;
+}
+
+.select-control:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .buttons-container{
