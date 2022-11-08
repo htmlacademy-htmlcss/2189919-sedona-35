@@ -663,6 +663,7 @@ body {
   padding-right: 70px;
   padding-left: 70px;
   padding-top: 35px;
+  padding-bottom: 70px;
   background-image: url(../images/catalog-hotels-bg.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -757,6 +758,7 @@ body {
 /*breadcrumbs*/
 
 /*catalog*/
+
 .catalog-filter {
   display: grid;
   grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px;
@@ -938,6 +940,92 @@ body {
 .catalog-buttons .catalog-btn:not(:last-child) {
   margin-bottom: 32px;
 }
+
+/*catalog checkboxes*/
+.catalog-filter-group .catalog-filter-item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.control {
+  position: relative;
+  cursor: pointer;
+  padding-left: 36px;
+  line-height: 23px;
+}
+
+.control-name {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.control-check {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.control:hover .control-check,
+.control:hover .control-name,
+.control:hover .control-radio {
+  opacity: 60%;
+}
+
+.control-input[type="checkbox"]:checked + .control-check::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 4px;
+  background-image: url("../images/checkbox.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.control-input[type="radio"]:checked + .control-radio::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input[type="checkbox"]:hover + .control-check,
+.control-input[type="radio"]:hover + .control-radio {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.control-input[type="checkbox"]:focus-visible + .control-check,
+.control-input[type="radio"]:focus-visible + .control-radio {
+  outline: 3px solid #83b3d3;
+}
+
+
+.control-input[type="checkbox"]:active + .control-check,
+.control-input[type="radio"]:active + .control-radio {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*catalog checkboxes*/
 
 /*catalog*/
 
