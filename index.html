@@ -235,5 +235,68 @@
         </div>
       </footer>
     </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+
+            <div class="modal-group">
+              <label class="modal-label modal-label-from" for="from-date">Дата Заезда:</label>
+              <span class="field-date-from">
+                <input class="modal-input modal-input-date" type="text" id="from-date" name="from-date" value="27 апреля 2020" required>
+                <button class="button-calendar" type="button">
+                  <span class="visually-hidden">Календарь</span>
+                </button>
+              </span>
+              <span class="notice date-notice">Мы не можем отправить вас в прошлое.</span>
+            </div>
+
+            <div class="modal-group">
+              <label class="modal-label modal-label-to" for="to-date">Дата Заезда:</label>
+              <span class="field-date-to">
+                <input class="modal-input modal-input-date" type="text" id="to-date" name="to-date" value="1 сентября 2021" required>
+                <button class="button-calendar" type="button">
+                  <span class="visually-hidden">Календарь</span>
+                </button>
+              </span>
+              <span class="notice date-notice">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+
+            <div class="modal-wrapper">
+              <div class="modal-group">
+                <label class="modal-label modal-label-adults" for="adults">Взрослые:</label>
+                <span class="field-adults">
+                  <button class="number-button number-button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить</span>
+                  </button>
+                  <input class="modal-input" type="number" id="adults" name="adults" value="2">
+                  <button class="number-button number-button-plus" type="button">
+                    <span class="visually-hidden">Увеличить</span>
+                  </button>
+                </span>
+              </div>
+              <div class="modal-group">
+                <label class="modal-label modal-label-children" for="children">Дети:</label>
+                <span class="field-children">
+                  <button class="number-button number-button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить</span>
+                  </button>
+                  <input class="modal-input" type="number" id="children" name="children" value="2">
+                  <button class="number-button number-button-plus" type="button">
+                    <span class="visually-hidden">Увеличить</span>
+                  </button>
+                </span>
+              </div>
+            </div>
+
+            <input class="modal-button button-second" type="submit" value="Найти">
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
