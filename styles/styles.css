@@ -250,8 +250,9 @@ body {
 }
 
 
-
 .advantages-title-blue {
+  position: relative;
+  display: block;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -263,6 +264,17 @@ body {
   margin: 0 auto;
   margin-top: 90px;
   margin-bottom: 62px;
+}
+
+.advantages-title-blue.decoration::before {
+  position: absolute;
+  bottom: -30px;
+  left: 56px;
+  align-items: center;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-description-blue {
@@ -284,6 +296,7 @@ body {
 }
 
 .advantages-title {
+  position: relative;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -295,6 +308,17 @@ body {
   margin: 0 auto;
   margin-top: 103px;
   margin-bottom: 62px;
+}
+
+.advantages-title.decoration::before {
+  position: absolute;
+  bottom: -30px;
+  left: 56px;
+  align-items: center;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-description {
@@ -639,9 +663,10 @@ body {
   padding-right: 70px;
   padding-left: 70px;
   padding-top: 35px;
+  padding-bottom: 70px;
   background-image: url(../images/catalog-hotels-bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   color: #fff;
 }
 
@@ -733,17 +758,26 @@ body {
 /*breadcrumbs*/
 
 /*catalog*/
-.catalog-filter-group {
-  border: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 75px;
+
+.catalog-filter {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px 2fr 288px 1fr 191px;
 }
 
 .catalog-filter-title {
   margin: 0;
   padding: 0;
   margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  grid-column: 1 / -1;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-filter-list {
@@ -752,17 +786,246 @@ body {
   padding: 0;
 }
 
-.catalog-filter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+.catalog-filter-group-infrastructure {
+  grid-column-start: 1;
 }
 
-.catalog-filter-item:not(last-child) {
-  margin-bottom: 16px;
+.catalog-filter-group-type {
+  grid-column-start: 3;
 }
+
+.catalog-filter-group-price {
+  grid-column-start: 5;
+}
+
+.catalog-buttons {
+  max-width: 191px;
+  padding-top: 56px;
+  grid-column-start: 7;
+}
+
+.catalog-price {
+  display: block;
+  max-width: 143px;
+  padding: 11px 8px 9px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-indent: 10px;
+  background: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.catalog-price:hover {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.catalog-price:focus-visible {
+  background: #e6e6e6;
+  border-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.catalog-price:active {
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.catalog-lable-min .catalog-price {
+  border-radius: 4px 0 0 4px;
+}
+
+
+.catalog-lable-max .catalog-price {
+  border-radius: 0 4px 4px 0;
+}
+
+
+.price-wrapper {
+  display: grid;
+  column-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
+}
+
+.catalog-label {
+  position: relative;
+}
+
+.catalog-scale {
+  position: relative;
+  height: 4px;
+  margin-top: 44px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-bar {
+  position: absolute;
+  left: 0;
+  width: 226px;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.catalog-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catalog-button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.catalog-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.catalog-button:active {
+  outline: 3px solid #83b3d3;
+}
+
+.catalog-button:disabled {
+  outline: none;
+  cursor: default;
+}
+
+.button-min {
+  top: -8px;
+  left: 0;
+}
+
+.button-max {
+  top: -8px;
+  left: 207px;
+}
+
+.catalog-lable {
+  position: relative;
+}
+
+.catalog-price-text {
+  position: absolute;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  top: 50%;
+  right: 20px;
+  display: inline-block;
+  height: 24px;
+  overflow: hidden;
+  text-align: right;
+  color: #000000;
+  opacity: 30%;
+  transform: translateY(-50%);
+}
+
+.catalog-price::-webkit-inner-spin-button,
+.catalog-price::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.catalog-buttons .catalog-btn:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+/*catalog checkboxes*/
+.catalog-filter-group .catalog-filter-item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.control {
+  position: relative;
+  cursor: pointer;
+  padding-left: 36px;
+  line-height: 23px;
+}
+
+.control-name {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.control-check {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.control:hover .control-check,
+.control:hover .control-name,
+.control:hover .control-radio {
+  opacity: 60%;
+}
+
+.control-input[type="checkbox"]:checked + .control-check::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 4px;
+  background-image: url("../images/checkbox.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.control-input[type="radio"]:checked + .control-radio::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-input[type="checkbox"]:hover + .control-check,
+.control-input[type="radio"]:hover + .control-radio {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.control-input[type="checkbox"]:focus-visible + .control-check,
+.control-input[type="radio"]:focus-visible + .control-radio {
+  outline: 3px solid #83b3d3;
+}
+
+
+.control-input[type="checkbox"]:active + .control-check,
+.control-input[type="radio"]:active + .control-radio {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*catalog checkboxes*/
 
 /*catalog*/
 
@@ -772,18 +1035,52 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  margin: 0;
+  padding: 0;
+  margin-right: 200px;
 }
 
 .sorting {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: 1060px;
-  justify-content: space-between;
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 .select-control {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
   margin-right: 70px;
+  padding: 12px 32px 12px 19px;
+  border: 2px solid #e5e5e5;
+  width: 292px;
+  border-radius: 4px;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+  appearance: none;
+}
+
+.select-control:hover {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:focus {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:active {
+  border: 2px solid #3f5e72;
+}
+
+.select-control:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .buttons-container{
@@ -1137,3 +1434,302 @@ body {
 }
 
 /*buttons*/
+
+/*modal-container*/
+.modal-container {
+  position: fixed;
+  display: flex;
+  background-color: rgba(242, 242, 242, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background: #FFFFFF;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-auth {
+  width: 577px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  width: 53px;
+  height: 52px;
+  padding: 0;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  border: none;
+  outline: 3px solid transparent;
+  cursor: pointer;
+}
+
+.modal-close-button::before {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-image: url(../images/cross.svg);
+  content: "";
+  background-repeat: no-repeat;
+  color: #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 30%;
+}
+
+.modal-title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-search-form {
+  margin-top: 64px;
+}
+
+.modal-search-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content 1fr;
+  column-gap: 18px;
+  grid-template-rows: repeat(3, 48px);
+  row-gap: 48px;
+  align-items: center;
+  border: none;
+}
+
+.modal-form-label {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.modal-form-label.date-label {
+  grid-column: 1/2;
+}
+
+.modal-input {
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 4px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.input-date {
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.date-wrapper {
+  position: relative;
+  grid-column: 2/-1;
+}
+
+.date-invalid,
+.date-valid {
+  font: inherit;
+  display: none;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.modal-content .date-invalid {
+  color: #ff5757;
+}
+
+.date-invalid.shown,
+.date-valid.shown {
+  position: absolute;
+  top: 51px;
+  left: 20px;
+  display: block;
+}
+
+.calendar-button {
+  position: absolute;
+  left: 402px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  opacity: 30%;
+  background: url(../images/calendar.svg) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-form-age-range {
+  width: 247px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.age-range-wrapper {
+  width: 110px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.age-range-wrapper:last-of-type {
+  justify-self: end;
+}
+
+.modal-input[type="number"] {
+  width: 40px;
+  height: 100%;
+  text-align: center;
+}
+
+.modal-input[type="number"]::-webkit-outer-spin-button,
+.modal-input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.kids-label {
+  margin-left: 5px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 364px;
+  left: 464px;
+}
+
+.tooltip-toggle {
+  padding: 0;
+  margin: 0;
+  width: 26px;
+  height: 26px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.tooltip-toggle,
+.info-button {
+  position: relative;
+  top: 2px;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 40px;
+  left: -115px;
+  width: 256px;
+  height: 143px;
+  padding: 23px 18px 18px 22px;
+  box-sizing: border-box;
+  display: none;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.tooltip:hover .tooltip-text {
+  display: block;
+}
+
+
+.modal-range-button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-icon {
+  fill: #756157;
+  fill-opacity: 0.3;
+}
+
+.modal-range-button:hover .modal-icon,
+.modal-range-button:focus .modal-icon {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.modal-range-button:focus {
+  outline: 3px solid #82b3d3;
+}
+
+.modal-range-button:focus .modal-icon {
+  fill-opacity: 0.2;
+}
+
+.modal-button {
+  font-family: "PT Sans", sans-serif;
+  border: none;
+  background-color: #83B3D3;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.modal-search-form .modal-button {
+  grid-column: 1/-1;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 10px;
+}
+
+/*modal-container*/
