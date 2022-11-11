@@ -138,11 +138,13 @@ body {
 
 .loupe {
   background: url(../images/navigation-icon-search.svg) 50% 50% no-repeat;
+  background-color: transparent;
 }
 
 .favorites {
   position: relative;
   background: url(../images/navigation-icon-cart.svg) 50% 50% no-repeat;
+  background-color: transparent;
 }
 
 .favorites-added::after {
@@ -188,6 +190,7 @@ body {
   width: 1200px;
   height: 485px;
   background-image: url(../images/main-divider.png), url(../images/main-img-bg.jpg);
+  background-color: #000;
   background-position: center bottom, center;
   background-repeat: no-repeat, no-repeat;
   margin-bottom: 70px;
@@ -665,6 +668,7 @@ body {
   padding-top: 35px;
   padding-bottom: 70px;
   background-image: url(../images/catalog-hotels-bg.jpg);
+  background-color: #000;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: #fff;
@@ -712,6 +716,7 @@ body {
   height: 10px;
   content: "";
   background-image: url("../images/arrow.svg");
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -993,6 +998,7 @@ body {
   top: 5px;
   left: 4px;
   background-image: url("../images/checkbox.svg");
+  background-color: transparent;
   background-repeat: no-repeat;
   content: "";
 }
@@ -1061,6 +1067,7 @@ body {
   width: 292px;
   border-radius: 4px;
   background-image: url("../images/select-arrow.svg");
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: right 17px center;
   appearance: none;
@@ -1482,6 +1489,7 @@ body {
   width: 14px;
   height: 14px;
   background-image: url(../images/cross.svg);
+  background-color: transparent;
   content: "";
   background-repeat: no-repeat;
   color: #000000;
@@ -1591,6 +1599,7 @@ body {
   height: 20px;
   opacity: 30%;
   background: url(../images/calendar.svg) no-repeat;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
